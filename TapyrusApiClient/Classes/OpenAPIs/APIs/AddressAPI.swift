@@ -36,21 +36,21 @@ open class AddressAPI {
      - returns: RequestBuilder<String> 
      */
     open class func createAddressWithRequestBuilder() -> RequestBuilder<String> {
-        let path = "/addresses"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters: [String: Any]? = nil
+        let localVariablePath = "/addresses"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<String>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<String>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
@@ -81,24 +81,24 @@ open class AddressAPI {
      - returns: RequestBuilder<GetAddressesResponse> 
      */
     open class func getAddressesWithRequestBuilder(per: Int? = nil, page: Int? = nil) -> RequestBuilder<GetAddressesResponse> {
-        let path = "/addresses"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters: [String: Any]? = nil
+        let localVariablePath = "/addresses"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
 
-        var urlComponents = URLComponents(string: URLString)
-        urlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
             "per": per?.encodeToJSON(),
             "page": page?.encodeToJSON(),
         ])
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<GetAddressesResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<GetAddressesResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 }

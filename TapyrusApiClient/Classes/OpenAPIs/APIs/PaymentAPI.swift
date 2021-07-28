@@ -38,20 +38,20 @@ open class PaymentAPI {
      - returns: RequestBuilder<PaymentResponse> 
      */
     open class func transferWithRequestBuilder(paymentRequest: PaymentRequest? = nil) -> RequestBuilder<PaymentResponse> {
-        let path = "/payment"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: paymentRequest)
+        let localVariablePath = "/payment"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: paymentRequest)
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<PaymentResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<PaymentResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 }

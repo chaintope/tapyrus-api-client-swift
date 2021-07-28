@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BF327BE26C8415D32B0BCDD /* GetAddressesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315014D8889CDF26317C2DC /* GetAddressesResponse.swift */; };
+		1A97D926651B9F5EBE54006F /* AnyCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27ECAF03FD7E1B8726A9E3F9 /* AnyCodable.framework */; };
+		1B3DF7F5E53C299C4901E8DB /* PaymentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FAE848BEA1AA3B2258AA9D /* PaymentAPI.swift */; };
+		25D217A76F3CB7D50F0B2E0B /* GetTokensResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67314618425D455FF22A68C8 /* GetTokensResponse.swift */; };
+		2C8E5C103460BA01898B3B3D /* TimestampAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3879A1EC5294DFE14A80315E /* TimestampAPI.swift */; };
+		36DBC88302280ECFCC103830 /* AddressAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E01ABE4EC02DB099E6F92 /* AddressAPI.swift */; };
+		3B638A7579A06A19CBFC4922 /* IssueTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89495D79C6E76BC1A61816FF /* IssueTokenRequest.swift */; };
+		463AFBBA1C4649B95E65AA8C /* URLSessionImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E38C9F616AA884351A6122 /* URLSessionImplementations.swift */; };
+		467ED138D50BE3FF46B8ED66 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438E88A804FBCDE96E71B9 /* TokenResponse.swift */; };
+		51E9C4E467FA5D38B61AF982 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFE9E94C924F0BD40E8F3E /* PaymentResponse.swift */; };
+		5661196A08C6EEBFC391F1A4 /* JSONDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC807DC1386B6706DF6EF40 /* JSONDataEncoding.swift */; };
+		56E182AAE970F6163E4016EA /* TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0C53C3957AF45FF7887AE /* TokenAPI.swift */; };
+		5945E08C0A51C6A2721B7537 /* ReissueTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9870BF5E5C09C523000A7E4A /* ReissueTokenRequest.swift */; };
+		5BA5409671FB2962B88502D3 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC245BDC1F3A0F151A5DC336 /* JSONEncodingHelper.swift */; };
+		5CDAAE28DEB03213ECA65342 /* Pods_TapyrusApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DD2E3013249DB4ED80B9EB /* Pods_TapyrusApiClient.framework */; };
+		5E24F44C6D5C553234F088C4 /* TransferTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22AC5DCBE189553643A565 /* TransferTokenRequest.swift */; };
+		6646B30B43FA72B17673B1C2 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCD00ADAAD64F81316CDE9 /* APIs.swift */; };
+		670539B465802EC53642EEFF /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952144FFF2682CFB1E370B35 /* PaymentRequest.swift */; };
+		68F7AF472A45AAC15C493E51 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C28195AD05F4902DD27E4 /* CodableHelper.swift */; };
+		6EC8635D94696AF04BBEB9ED /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35F6903BD43E4B96CCAC12 /* UserAPI.swift */; };
+		9F5921DADFAE51E544726417 /* AddTimestampRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6376C6748A97F9435151B97 /* AddTimestampRequest.swift */; };
+		9FE5D33952A21C3CEBF4B3EC /* CreateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CC2F20F6FA22DAE4A5C04 /* CreateUserRequest.swift */; };
+		AECEAFCEB500F17811DCB271 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BFB160718266DE15D3B697 /* SynchronizedDictionary.swift */; };
+		BDFF8F04F1E0F6BE9FA22788 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93D9854B7B6C2D63724BA1 /* APIHelper.swift */; };
+		BE264BB3D5C10E9E5DB1A611 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6022B0218F8C5C8D935BEC51 /* Extensions.swift */; };
+		C01EEDF2B7026DBE6E496BA8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B88916A567758DF4F74C0 /* Models.swift */; };
+		D503934A2061C91C0EC0702A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0D989EFB90A45BC7D6711 /* Configuration.swift */; };
+		F248A8469A7F8B7C96091BBB /* UserinfoResponseBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA90E7B8E4F5FD0FCAEA88F /* UserinfoResponseBalances.swift */; };
+		F955B7781AEE0356081BCD9B /* UserinfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6659C7DF6CA92F98CF25936F /* UserinfoResponse.swift */; };
+		FF307F48186CD8B6172038F4 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D29DEC07943186D17BF4A0 /* OpenISO8601DateFormatter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A938ED86564E4DAF07C8B93 /* Pods-TapyrusApiClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapyrusApiClient.debug.xcconfig"; path = "Target Support Files/Pods-TapyrusApiClient/Pods-TapyrusApiClient.debug.xcconfig"; sourceTree = "<group>"; };
+		208C28195AD05F4902DD27E4 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
+		27ECAF03FD7E1B8726A9E3F9 /* AnyCodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyCodable.framework; sourceTree = "<group>"; };
+		29BFB160718266DE15D3B697 /* SynchronizedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizedDictionary.swift; sourceTree = "<group>"; };
+		30438E88A804FBCDE96E71B9 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		3879A1EC5294DFE14A80315E /* TimestampAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampAPI.swift; sourceTree = "<group>"; };
+		3B22AC5DCBE189553643A565 /* TransferTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTokenRequest.swift; sourceTree = "<group>"; };
+		3ECCD00ADAAD64F81316CDE9 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		5D35F6903BD43E4B96CCAC12 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		6022B0218F8C5C8D935BEC51 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6659C7DF6CA92F98CF25936F /* UserinfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserinfoResponse.swift; sourceTree = "<group>"; };
+		67314618425D455FF22A68C8 /* GetTokensResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokensResponse.swift; sourceTree = "<group>"; };
+		6F3B88916A567758DF4F74C0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6FC807DC1386B6706DF6EF40 /* JSONDataEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataEncoding.swift; sourceTree = "<group>"; };
+		7E93D9854B7B6C2D63724BA1 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		846CC2F20F6FA22DAE4A5C04 /* CreateUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserRequest.swift; sourceTree = "<group>"; };
+		89495D79C6E76BC1A61816FF /* IssueTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTokenRequest.swift; sourceTree = "<group>"; };
+		92FAE848BEA1AA3B2258AA9D /* PaymentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAPI.swift; sourceTree = "<group>"; };
+		952144FFF2682CFB1E370B35 /* PaymentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		96D29DEC07943186D17BF4A0 /* OpenISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		9870BF5E5C09C523000A7E4A /* ReissueTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueTokenRequest.swift; sourceTree = "<group>"; };
+		A42E01ABE4EC02DB099E6F92 /* AddressAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAPI.swift; sourceTree = "<group>"; };
+		CAE0D989EFB90A45BC7D6711 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		D1E38C9F616AA884351A6122 /* URLSessionImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionImplementations.swift; sourceTree = "<group>"; };
+		D315014D8889CDF26317C2DC /* GetAddressesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAddressesResponse.swift; sourceTree = "<group>"; };
+		DA8A1135334472A721E9E2EF /* Pods-TapyrusApiClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapyrusApiClient.release.xcconfig"; path = "Target Support Files/Pods-TapyrusApiClient/Pods-TapyrusApiClient.release.xcconfig"; sourceTree = "<group>"; };
+		F3DD2E3013249DB4ED80B9EB /* Pods_TapyrusApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapyrusApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F8763DF360596A1E0FDE1F /* TapyrusApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapyrusApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6376C6748A97F9435151B97 /* AddTimestampRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimestampRequest.swift; sourceTree = "<group>"; };
+		F8CFE9E94C924F0BD40E8F3E /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		F8E0C53C3957AF45FF7887AE /* TokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPI.swift; sourceTree = "<group>"; };
+		FC245BDC1F3A0F151A5DC336 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
+		FEA90E7B8E4F5FD0FCAEA88F /* UserinfoResponseBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserinfoResponseBalances.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29BE74CAEE563303AE376668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A97D926651B9F5EBE54006F /* AnyCodable.framework in Frameworks */,
+				5CDAAE28DEB03213ECA65342 /* Pods_TapyrusApiClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		110E4007B42B22C3DD27A1CD /* OpenAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				7E93D9854B7B6C2D63724BA1 /* APIHelper.swift */,
+				3ECCD00ADAAD64F81316CDE9 /* APIs.swift */,
+				208C28195AD05F4902DD27E4 /* CodableHelper.swift */,
+				CAE0D989EFB90A45BC7D6711 /* Configuration.swift */,
+				6022B0218F8C5C8D935BEC51 /* Extensions.swift */,
+				6FC807DC1386B6706DF6EF40 /* JSONDataEncoding.swift */,
+				FC245BDC1F3A0F151A5DC336 /* JSONEncodingHelper.swift */,
+				6F3B88916A567758DF4F74C0 /* Models.swift */,
+				96D29DEC07943186D17BF4A0 /* OpenISO8601DateFormatter.swift */,
+				29BFB160718266DE15D3B697 /* SynchronizedDictionary.swift */,
+				D1E38C9F616AA884351A6122 /* URLSessionImplementations.swift */,
+				CA9D612C5FA98D1050B26BE1 /* APIs */,
+				B88E5DC97E836C910DCF52B2 /* Models */,
+			);
+			path = OpenAPIs;
+			sourceTree = "<group>";
+		};
+		3812BDEC49789CFC2327B647 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A938ED86564E4DAF07C8B93 /* Pods-TapyrusApiClient.debug.xcconfig */,
+				DA8A1135334472A721E9E2EF /* Pods-TapyrusApiClient.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		68617BD68AD7374FC39CB224 = {
+			isa = PBXGroup;
+			children = (
+				8B510AC0E7B04FAE0681E8F3 /* TapyrusApiClient */,
+				F7CE2CF850F8E4CE5414BA7B /* Frameworks */,
+				8ECA4EB5F1AF6ED5B2F19C59 /* Products */,
+				3812BDEC49789CFC2327B647 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6BB17FEAF7A2C97948D11F7A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				27ECAF03FD7E1B8726A9E3F9 /* AnyCodable.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		8B510AC0E7B04FAE0681E8F3 /* TapyrusApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				CA53F067CA95E5B01C6BFD8E /* Classes */,
+			);
+			path = TapyrusApiClient;
+			sourceTree = "<group>";
+		};
+		8ECA4EB5F1AF6ED5B2F19C59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3F8763DF360596A1E0FDE1F /* TapyrusApiClient.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B88E5DC97E836C910DCF52B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6376C6748A97F9435151B97 /* AddTimestampRequest.swift */,
+				846CC2F20F6FA22DAE4A5C04 /* CreateUserRequest.swift */,
+				D315014D8889CDF26317C2DC /* GetAddressesResponse.swift */,
+				67314618425D455FF22A68C8 /* GetTokensResponse.swift */,
+				89495D79C6E76BC1A61816FF /* IssueTokenRequest.swift */,
+				952144FFF2682CFB1E370B35 /* PaymentRequest.swift */,
+				F8CFE9E94C924F0BD40E8F3E /* PaymentResponse.swift */,
+				9870BF5E5C09C523000A7E4A /* ReissueTokenRequest.swift */,
+				30438E88A804FBCDE96E71B9 /* TokenResponse.swift */,
+				3B22AC5DCBE189553643A565 /* TransferTokenRequest.swift */,
+				6659C7DF6CA92F98CF25936F /* UserinfoResponse.swift */,
+				FEA90E7B8E4F5FD0FCAEA88F /* UserinfoResponseBalances.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCAF12BDD9ED62ACB171FD5F /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				6BB17FEAF7A2C97948D11F7A /* iOS */,
+			);
+			name = Carthage;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		CA53F067CA95E5B01C6BFD8E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				110E4007B42B22C3DD27A1CD /* OpenAPIs */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CA9D612C5FA98D1050B26BE1 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				A42E01ABE4EC02DB099E6F92 /* AddressAPI.swift */,
+				92FAE848BEA1AA3B2258AA9D /* PaymentAPI.swift */,
+				3879A1EC5294DFE14A80315E /* TimestampAPI.swift */,
+				F8E0C53C3957AF45FF7887AE /* TokenAPI.swift */,
+				5D35F6903BD43E4B96CCAC12 /* UserAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		F7CE2CF850F8E4CE5414BA7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF12BDD9ED62ACB171FD5F /* Carthage */,
+				F3DD2E3013249DB4ED80B9EB /* Pods_TapyrusApiClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10DBAA174F63C9689CA658B /* TapyrusApiClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654B7A1B6701390772EF67C6 /* Build configuration list for PBXNativeTarget "TapyrusApiClient" */;
+			buildPhases = (
+				B0D7BCC20785758E27F3F752 /* [CP] Check Pods Manifest.lock */,
+				71EB6D51B5E6A6F145F48B9F /* Sources */,
+				29BE74CAEE563303AE376668 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapyrusApiClient;
+			productName = TapyrusApiClient;
+			productReference = F3F8763DF360596A1E0FDE1F /* TapyrusApiClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4C51B312209AE96DB65AB81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = FF8063E34EDF142E2F476FA5 /* Build configuration list for PBXProject "TapyrusApiClient" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 68617BD68AD7374FC39CB224;
+			productRefGroup = 8ECA4EB5F1AF6ED5B2F19C59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F10DBAA174F63C9689CA658B /* TapyrusApiClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0D7BCC20785758E27F3F752 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapyrusApiClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71EB6D51B5E6A6F145F48B9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFF8F04F1E0F6BE9FA22788 /* APIHelper.swift in Sources */,
+				6646B30B43FA72B17673B1C2 /* APIs.swift in Sources */,
+				9F5921DADFAE51E544726417 /* AddTimestampRequest.swift in Sources */,
+				36DBC88302280ECFCC103830 /* AddressAPI.swift in Sources */,
+				68F7AF472A45AAC15C493E51 /* CodableHelper.swift in Sources */,
+				D503934A2061C91C0EC0702A /* Configuration.swift in Sources */,
+				9FE5D33952A21C3CEBF4B3EC /* CreateUserRequest.swift in Sources */,
+				BE264BB3D5C10E9E5DB1A611 /* Extensions.swift in Sources */,
+				0BF327BE26C8415D32B0BCDD /* GetAddressesResponse.swift in Sources */,
+				25D217A76F3CB7D50F0B2E0B /* GetTokensResponse.swift in Sources */,
+				3B638A7579A06A19CBFC4922 /* IssueTokenRequest.swift in Sources */,
+				5661196A08C6EEBFC391F1A4 /* JSONDataEncoding.swift in Sources */,
+				5BA5409671FB2962B88502D3 /* JSONEncodingHelper.swift in Sources */,
+				C01EEDF2B7026DBE6E496BA8 /* Models.swift in Sources */,
+				FF307F48186CD8B6172038F4 /* OpenISO8601DateFormatter.swift in Sources */,
+				1B3DF7F5E53C299C4901E8DB /* PaymentAPI.swift in Sources */,
+				670539B465802EC53642EEFF /* PaymentRequest.swift in Sources */,
+				51E9C4E467FA5D38B61AF982 /* PaymentResponse.swift in Sources */,
+				5945E08C0A51C6A2721B7537 /* ReissueTokenRequest.swift in Sources */,
+				AECEAFCEB500F17811DCB271 /* SynchronizedDictionary.swift in Sources */,
+				2C8E5C103460BA01898B3B3D /* TimestampAPI.swift in Sources */,
+				56E182AAE970F6163E4016EA /* TokenAPI.swift in Sources */,
+				467ED138D50BE3FF46B8ED66 /* TokenResponse.swift in Sources */,
+				5E24F44C6D5C553234F088C4 /* TransferTokenRequest.swift in Sources */,
+				463AFBBA1C4649B95E65AA8C /* URLSessionImplementations.swift in Sources */,
+				6EC8635D94696AF04BBEB9ED /* UserAPI.swift in Sources */,
+				F955B7781AEE0356081BCD9B /* UserinfoResponse.swift in Sources */,
+				F248A8469A7F8B7C96091BBB /* UserinfoResponseBalances.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		162D0A3BFFBA82D461ED6ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		44ABCC9A8EDD66B7A37B98DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8A1135334472A721E9E2EF /* Pods-TapyrusApiClient.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		5DCC472E35AB227454D6DFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A938ED86564E4DAF07C8B93 /* Pods-TapyrusApiClient.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		DD7ACDC6C1451749C0A15F9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		654B7A1B6701390772EF67C6 /* Build configuration list for PBXNativeTarget "TapyrusApiClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DCC472E35AB227454D6DFB4 /* Debug */,
+				44ABCC9A8EDD66B7A37B98DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FF8063E34EDF142E2F476FA5 /* Build configuration list for PBXProject "TapyrusApiClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7ACDC6C1451749C0A15F9F /* Debug */,
+				162D0A3BFFBA82D461ED6ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4C51B312209AE96DB65AB81 /* Project object */;
+}

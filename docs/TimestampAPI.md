@@ -60,7 +60,7 @@ No authorization required
 
 # **getTimestamps**
 ```swift
-    open class func getTimestamps(completion: @escaping (_ data: [AnyCodable]?, _ error: Error?) -> Void)
+    open class func getTimestamps(completion: @escaping (_ data: [Array]?, _ error: Error?) -> Void)
 ```
 
 Timestamp一覧表示
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[AnyCodable]**](AnyCodable.md)
+[**[Array]**](Array.md)
 
 ### Authorization
 

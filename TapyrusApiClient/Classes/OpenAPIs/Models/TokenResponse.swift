@@ -12,16 +12,16 @@ import AnyCodable
 
 public struct TokenResponse: Codable, Hashable {
 
-    public var tokenId: String?
+    public var tokensId: String?
     public var txid: String?
 
-    public init(tokenId: String? = nil, txid: String? = nil) {
-        self.tokenId = tokenId
+    public init(tokensId: String? = nil, txid: String? = nil) {
+        self.tokensId = tokensId
         self.txid = txid
     }
 
     public enum CodingKeys: String, CodingKey, CaseIterable {
-        case tokenId = "token_id"
+        case tokensId = "tokens_id"
         case txid
     }
 
@@ -29,7 +29,7 @@ public struct TokenResponse: Codable, Hashable {
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(tokenId, forKey: .tokenId)
+        try container.encodeIfPresent(tokensId, forKey: .tokensId)
         try container.encodeIfPresent(txid, forKey: .txid)
     }
 }
