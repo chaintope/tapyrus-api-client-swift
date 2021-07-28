@@ -38,21 +38,21 @@ open class TimestampAPI {
      - returns: RequestBuilder<Void> 
      */
     open class func addTimestampWithRequestBuilder(addTimestampRequest: AddTimestampRequest? = nil) -> RequestBuilder<Void> {
-        let path = "/timestamp"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: addTimestampRequest)
+        let localVariablePath = "/timestamp"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: addTimestampRequest)
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<Void>.Type = TapyrusApiClient.requestBuilderFactory.getNonDecodableBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Void>.Type = TapyrusApiClient.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
@@ -79,20 +79,20 @@ open class TimestampAPI {
      - returns: RequestBuilder<[AnyCodable]> 
      */
     open class func getTimestampsWithRequestBuilder() -> RequestBuilder<[AnyCodable]> {
-        let path = "/timestamps"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters: [String: Any]? = nil
+        let localVariablePath = "/timestamps"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<[AnyCodable]>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<[AnyCodable]>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 }

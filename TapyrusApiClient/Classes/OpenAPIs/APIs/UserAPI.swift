@@ -38,21 +38,21 @@ open class UserAPI {
      - returns: RequestBuilder<Void> 
      */
     open class func createUserWithRequestBuilder(createUserRequest: CreateUserRequest) -> RequestBuilder<Void> {
-        let path = "/users"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: createUserRequest)
+        let localVariablePath = "/users"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: createUserRequest)
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<Void>.Type = TapyrusApiClient.requestBuilderFactory.getNonDecodableBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Void>.Type = TapyrusApiClient.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
@@ -81,23 +81,23 @@ open class UserAPI {
      - returns: RequestBuilder<UserinfoResponse> 
      */
     open class func getUserInfoWithRequestBuilder(confirmationOnly: Bool? = nil) -> RequestBuilder<UserinfoResponse> {
-        let path = "/userinfo"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters: [String: Any]? = nil
+        let localVariablePath = "/userinfo"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
 
-        var urlComponents = URLComponents(string: URLString)
-        urlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
             "confirmation_only": confirmationOnly?.encodeToJSON(),
         ])
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<UserinfoResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<UserinfoResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 }

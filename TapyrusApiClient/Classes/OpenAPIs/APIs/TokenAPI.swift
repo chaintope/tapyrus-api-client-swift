@@ -40,27 +40,27 @@ open class TokenAPI {
      - returns: RequestBuilder<Void> 
      */
     open class func burnTokenWithRequestBuilder(tokenId: String, amount: Int? = nil) -> RequestBuilder<Void> {
-        var path = "/tokens/{token_id}/burn"
+        var localVariablePath = "/tokens/{token_id}/burn"
         let tokenIdPreEscape = "\(APIHelper.mapValueToPathItem(tokenId))"
         let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{token_id}", with: tokenIdPostEscape, options: .literal, range: nil)
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters: [String: Any]? = nil
+        localVariablePath = localVariablePath.replacingOccurrences(of: "{token_id}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
 
-        var urlComponents = URLComponents(string: URLString)
-        urlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
             "amount": amount?.encodeToJSON(),
         ])
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<Void>.Type = TapyrusApiClient.requestBuilderFactory.getNonDecodableBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Void>.Type = TapyrusApiClient.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "DELETE", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "DELETE", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
@@ -89,30 +89,30 @@ open class TokenAPI {
      - returns: RequestBuilder<[GetTokensResponse]> 
      */
     open class func getTokensWithRequestBuilder(confirmationOnly: Bool? = nil) -> RequestBuilder<[GetTokensResponse]> {
-        let path = "/tokens"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters: [String: Any]? = nil
+        let localVariablePath = "/tokens"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
 
-        var urlComponents = URLComponents(string: URLString)
-        urlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
             "confirmation_only": confirmationOnly?.encodeToJSON(),
         ])
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<[GetTokensResponse]>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<[GetTokensResponse]>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
      トークンの新規発行
      
-     - parameter issueTokenRequest: (body) &#x60;amount&#x60;を受け取り指定した数のトークンを新規発行します。 任意で&#x60;token_type&#x60;を設定し、トークンの種類を指定できます。 &#x60;token_type&#x60;が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT  また、&#x60;token_type&#x60;が未指定または&#x60;1&#x60;の場合、任意でトークン識別子&#x60;id&#x60;を指定することで、指定したトークン識別子のトークンを再発行します。  (optional)
+     - parameter issueTokenRequest: (body) &#x60;amount&#x60;を受け取り指定した数のトークンを新規発行します。 任意で&#x60;token_type&#x60;を設定し、トークンの種類を指定できます。 &#x60;token_type&#x60;が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT また、&#x60;token_type&#x60;が未指定または&#x60;1&#x60;の場合、任意でトークン識別子&#x60;id&#x60;を指定することで、指定したトークン識別子のトークンを再発行します。  (optional)
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -131,25 +131,25 @@ open class TokenAPI {
      トークンの新規発行
      - POST /tokens/issue
      - 任意の数のトークンを新規発行します。
-     - parameter issueTokenRequest: (body) &#x60;amount&#x60;を受け取り指定した数のトークンを新規発行します。 任意で&#x60;token_type&#x60;を設定し、トークンの種類を指定できます。 &#x60;token_type&#x60;が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT  また、&#x60;token_type&#x60;が未指定または&#x60;1&#x60;の場合、任意でトークン識別子&#x60;id&#x60;を指定することで、指定したトークン識別子のトークンを再発行します。  (optional)
+     - parameter issueTokenRequest: (body) &#x60;amount&#x60;を受け取り指定した数のトークンを新規発行します。 任意で&#x60;token_type&#x60;を設定し、トークンの種類を指定できます。 &#x60;token_type&#x60;が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT また、&#x60;token_type&#x60;が未指定または&#x60;1&#x60;の場合、任意でトークン識別子&#x60;id&#x60;を指定することで、指定したトークン識別子のトークンを再発行します。  (optional)
      - returns: RequestBuilder<TokenResponse> 
      */
     open class func issueTokenWithRequestBuilder(issueTokenRequest: IssueTokenRequest? = nil) -> RequestBuilder<TokenResponse> {
-        let path = "/tokens/issue"
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: issueTokenRequest)
+        let localVariablePath = "/tokens/issue"
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: issueTokenRequest)
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<TokenResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<TokenResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
@@ -180,24 +180,24 @@ open class TokenAPI {
      - returns: RequestBuilder<TokenResponse> 
      */
     open class func reissueTokenWithRequestBuilder(tokenId: String, reissueTokenRequest: ReissueTokenRequest? = nil) -> RequestBuilder<TokenResponse> {
-        var path = "/tokens/{token_id}/reissue"
+        var localVariablePath = "/tokens/{token_id}/reissue"
         let tokenIdPreEscape = "\(APIHelper.mapValueToPathItem(tokenId))"
         let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{token_id}", with: tokenIdPostEscape, options: .literal, range: nil)
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: reissueTokenRequest)
+        localVariablePath = localVariablePath.replacingOccurrences(of: "{token_id}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: reissueTokenRequest)
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<TokenResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<TokenResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "POST", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 
     /**
@@ -228,23 +228,23 @@ open class TokenAPI {
      - returns: RequestBuilder<TokenResponse> 
      */
     open class func transferTokenWithRequestBuilder(tokenId: String, transferTokenRequest: TransferTokenRequest) -> RequestBuilder<TokenResponse> {
-        var path = "/tokens/{token_id}/transfer"
+        var localVariablePath = "/tokens/{token_id}/transfer"
         let tokenIdPreEscape = "\(APIHelper.mapValueToPathItem(tokenId))"
         let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{token_id}", with: tokenIdPostEscape, options: .literal, range: nil)
-        let URLString = TapyrusApiClient.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: transferTokenRequest)
+        localVariablePath = localVariablePath.replacingOccurrences(of: "{token_id}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let localVariableURLString = TapyrusApiClient.basePath + localVariablePath
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: transferTokenRequest)
 
-        let urlComponents = URLComponents(string: URLString)
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
-        let nillableHeaders: [String: Any?] = [
+        let localVariableNillableHeaders: [String: Any?] = [
             :
         ]
 
-        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let requestBuilder: RequestBuilder<TokenResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<TokenResponse>.Type = TapyrusApiClient.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", URLString: (urlComponents?.string ?? URLString), parameters: parameters, headers: headerParameters)
+        return localVariableRequestBuilder.init(method: "PUT", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
 }

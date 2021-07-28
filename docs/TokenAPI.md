@@ -127,7 +127,7 @@ No authorization required
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
 import TapyrusApiClient
 
-let issueTokenRequest = IssueTokenRequest(amount: 123, tokenType: 123) // IssueTokenRequest | `amount`を受け取り指定した数のトークンを新規発行します。 任意で`token_type`を設定し、トークンの種類を指定できます。 `token_type`が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT  また、`token_type`が未指定または`1`の場合、任意でトークン識別子`id`を指定することで、指定したトークン識別子のトークンを再発行します。  (optional)
+let issueTokenRequest = IssueTokenRequest(amount: 123, tokenType: 123) // IssueTokenRequest | `amount`を受け取り指定した数のトークンを新規発行します。 任意で`token_type`を設定し、トークンの種類を指定できます。 `token_type`が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT また、`token_type`が未指定または`1`の場合、任意でトークン識別子`id`を指定することで、指定したトークン識別子のトークンを再発行します。  (optional)
 
 // トークンの新規発行
 TokenAPI.issueToken(issueTokenRequest: issueTokenRequest) { (response, error) in
@@ -146,7 +146,7 @@ TokenAPI.issueToken(issueTokenRequest: issueTokenRequest) { (response, error) in
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **issueTokenRequest** | [**IssueTokenRequest**](IssueTokenRequest.md) | &#x60;amount&#x60;を受け取り指定した数のトークンを新規発行します。 任意で&#x60;token_type&#x60;を設定し、トークンの種類を指定できます。 &#x60;token_type&#x60;が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT  また、&#x60;token_type&#x60;が未指定または&#x60;1&#x60;の場合、任意でトークン識別子&#x60;id&#x60;を指定することで、指定したトークン識別子のトークンを再発行します。  | [optional] 
+ **issueTokenRequest** | [**IssueTokenRequest**](IssueTokenRequest.md) | &#x60;amount&#x60;を受け取り指定した数のトークンを新規発行します。 任意で&#x60;token_type&#x60;を設定し、トークンの種類を指定できます。 &#x60;token_type&#x60;が未指定な場合、再発行可能なトークンが発行されます。 トークンの種類は以下の通りです。 - 1: 再発行可能なトークン - 2: 再発行不可能なトークン - 3: NFT また、&#x60;token_type&#x60;が未指定または&#x60;1&#x60;の場合、任意でトークン識別子&#x60;id&#x60;を指定することで、指定したトークン識別子のトークンを再発行します。  | [optional] 
 
 ### Return type
 
